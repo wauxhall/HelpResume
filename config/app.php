@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\DtoServiceProvider::class,
+        App\Providers\ServiceServiceProvider::class,
+        App\Providers\DataCollectorServiceProvider::class,
     ],
 
     /*
