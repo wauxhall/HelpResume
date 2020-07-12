@@ -37,7 +37,7 @@ class VkDataCollector implements DataCollectorInterface
         $this->mlDto->setLastName($user['last_name']);
 
         $this->mlDto->setAge($age);
-        $this->mlDto->setCommunities($groups);
+        $this->mlDto->setCommunities(implode(',', $groups));
         $this->mlDto->setCountry($isCountryRussia);
         $this->mlDto->setFollowers($user['followers_count']);
         $this->mlDto->setFriends($friends['count']);

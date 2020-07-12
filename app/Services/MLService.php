@@ -14,9 +14,7 @@ class MLService
 
         $url = (string) Uri::createFromString($host)->withPath('/getProfile');
 
-        $response = Http::post($url, [
-            'data' => $dto->toJson()
-        ]);
+        $response = Http::asForm()->post($url, $dto->toArray());
 
         if (!$response || $response->failed()) {
             $additional = $response ? " (http-код {$response->status()})" : '';

@@ -127,7 +127,7 @@
                          data-responsive_offset="on"
                          data-responsive="off"
 
-                         style="z-index: 9; white-space: nowrap;padding:0;border-color:rgba(255, 255, 255, 0);border-style:none;"><form role="search" id="searchform" class="revtp-searchform" action="/getProfile"><input type="text" value="" name="link" id="link" placeholder="Ссылка на vk.com" /><input type="submit" id="searchsubmit" value="НАЙТИ" /></form>
+                         style="z-index: 9; white-space: nowrap;padding:0;border-color:rgba(255, 255, 255, 0);border-style:none;"><form role="search" id="searchform" class="revtp-searchform" action="/getProfile"><input type="text" value="" name="link" id="link" placeholder="Ссылка на vk.com" /><input type="submit" id="searchsubmit" value="НАЙТИ" /><img src="ajax-loader.gif" class="leftmargin-xs js-loader hidden"></form>
                     </div>
                 </li>
             </ul>
