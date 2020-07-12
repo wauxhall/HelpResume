@@ -32,7 +32,7 @@ class VkDataCollector implements DataCollectorInterface
             $bday = Carbon::parse($user['bdate']);
             $age = Carbon::today()->diffInYears($bday);
 
-            if ($age > 80) {
+            if (!$age || $age > 80) {
                 $age = $ageRand;
             }
         } else {
