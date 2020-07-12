@@ -12,6 +12,7 @@ class MLDto implements Jsonable, Arrayable
     protected $country = 1;
     protected $isBigCity = 0;
     protected $age = 0;
+    protected $actualAge = false;
     protected $communities = [];
     protected $followers = 0;
     protected $friends = 0;
@@ -191,11 +192,28 @@ class MLDto implements Jsonable, Arrayable
             'country' => $this->getCountry(),
             'isBigCity' => $this->getIsBigCity(),
             'age' => $this->getAge(),
+            'isActualAge' => $this->isActualAge(),
             'communities' => $this->getCommunities(),
             'followers' => $this->getFollowers(),
             'friends' => $this->getFriends(),
             'firstName' => $this->getFirstName(),
             'lastName' => $this->getLastName()
         ];
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActualAge(): bool
+    {
+        return $this->actualAge;
+    }
+
+    /**
+     * @param bool $actualAge
+     */
+    public function setActualAge(bool $actualAge): void
+    {
+        $this->actualAge = $actualAge;
     }
 }

@@ -10,6 +10,7 @@ class ProfileDto implements Arrayable, Jsonable
     protected $firstName = '';
     protected $lastName  = '';
     protected $age = 0;
+    protected $actualAge = false;
     protected $profession = '';
     protected $skills = '';
     protected $psycho = '';
@@ -116,6 +117,7 @@ class ProfileDto implements Arrayable, Jsonable
             'firstName' => $this->getFirstName(),
             'lastName' => $this->getLastName(),
             'age' => $this->getAge(),
+            'isActualAge' => $this->isActualAge(),
             'profession' => $this->getProfession(),
             'skills' => $this->getSkills(),
             'psycho' => $this->getPsycho(),
@@ -125,5 +127,21 @@ class ProfileDto implements Arrayable, Jsonable
     public function toJson($options = 0)
     {
         return json_encode($this->toArray());
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActualAge(): bool
+    {
+        return $this->actualAge;
+    }
+
+    /**
+     * @param bool $actualAge
+     */
+    public function setActualAge(bool $actualAge): void
+    {
+        $this->actualAge = $actualAge;
     }
 }

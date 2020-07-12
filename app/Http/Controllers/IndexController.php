@@ -31,6 +31,7 @@ class IndexController extends Controller
         $profileDto->setFirstName($mlDto->getFirstName());
         $profileDto->setLastName($mlDto->getLastName());
         $profileDto->setAge($mlDto->getAge());
+        $profileDto->setActualAge($mlDto->isActualAge());
         $profileDto->setProfession($mlResponse['proffession']);
         $profileDto->setSkills($mlResponse['skills']);
         $profileDto->setPsycho($mlResponse['psycho']);

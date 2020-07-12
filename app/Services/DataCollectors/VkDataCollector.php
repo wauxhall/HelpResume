@@ -28,12 +28,16 @@ class VkDataCollector implements DataCollectorInterface
         $friends = $this->api->getUserFriends($user['id']);
 
         $ageRand = rand (20, 30);
+        $hasActualAge = false;
+
         if (isset($user['bdate'])) {
             $bday = Carbon::parse($user['bdate']);
             $age = Carbon::today()->diffInYears($bday);
 
             if (!$age || $age > 80) {
                 $age = $ageRand;
+            } else {
+                $hasActualAge = true;
             }
         } else {
             $age = $ageRand;
@@ -57,6 +61,7 @@ class VkDataCollector implements DataCollectorInterface
         $this->mlDto->setLastName($user['last_name']);
 
         $this->mlDto->setAge($age);
+        $this->mlDto->setActualAge($hasActualAge);
         $this->mlDto->setCommunities(implode(',', $groups));
         $this->mlDto->setCountry($isCountryRussia);
         $this->mlDto->setFollowers($followers);

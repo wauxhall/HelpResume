@@ -13,7 +13,7 @@ $(document).ready(function () {
             success: function (data) {
                 $('.js-loader').addClass('hidden');
 
-                let age = data['age'] ? ', ' + data['age'] + ' лет' : '';
+                let age = data['isActualAge'] ? ', ' + data['age'] + ' лет' : '';
                 let fullNameWithAge = data['firstName'] + ' ' + data['lastName'] + age;
 
                 $('.modal-name-place').text(fullNameWithAge);
