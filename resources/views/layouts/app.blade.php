@@ -7,6 +7,8 @@
     <!-- Stylesheets
     ============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Montserrat:300,400,500,600,700,900|Roboto:700,900|Roboto+Slab:400" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏼‍🔧🎯👨🏼‍🔧U+1F477</text></svg>">
+
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/dark.css" type="text/css" />
